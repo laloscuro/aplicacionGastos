@@ -1,0 +1,25 @@
+<div class="flex-container-2">
+  <div class="flex-item">
+    <form [formGroup]="Loginform" (ngSubmit)="onSubmit(Loginform)" class="form">
+      Acceso a la aplicación de Gastos
+      <div class="form__section">
+        <!--<label for="usuario" class="label">Usuario:</label>//--><input type="text" formControlName="user" required minlength="4"
+          class="form__input" id="user" name="user" placeholder="Introduce Usuario" />
+          <div *ngIf="Loginform.get('user').hasError('required') && Loginform.get('user').touched">No puede estar vacio</div>
+
+      </div>
+      <div class="form__section">
+        <!--<label for="password" class="label">Contraseña:</label>//--><input type="password" formControlName="password" id="password" required
+          class="form__input" placeholder="Introduce Contraseña" />
+      </div>
+      <div class="form__section">
+        <input type="submit" [ngClass]="Loginform.invalid ? 'form__input_sub_des' : 'form__input_sub'"   [disabled]="Loginform.invalid"/>
+      </div>
+      <div *ngIf="status" class="form__section">
+        El usuario o contraseña introducidos no son válidos
+      </div>
+    </form>
+  </div>
+</div>
+
+

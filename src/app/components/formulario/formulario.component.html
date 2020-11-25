@@ -1,0 +1,44 @@
+
+<div class="flex-container-2">
+<form class="form" onsubmit="alert('pepe')" action="">
+  Acceso a la aplicación de Gastos
+  <div class="form__section">
+    <!--<label for="usuario" class="label">Usuario:</label>//--><input type="email" required minlength="4" class="form__input" id="usuario" name="usuario" placeholder="Introduce Usuario"/>
+  </div>
+  <div class="form__section">
+    <!--<label for="password" class="label">Contraseña:</label>//--><input type="password" id="password" required class="form__input" placeholder="Introduce Contraseña"/>
+  </div>
+  <div class="form__section">
+    <input type="submit" class="form__input_sub" />
+  </div>
+</form>
+<!--<div *ngIf="usuario.errors.required">
+  Name is required.
+</div>
+<div *ngIf="usuario.errors.minlength">
+  Name must be at least 4 characters long.
+</div>//-->
+</div>
+<p>formulario works!</p>
+<div [ngStyle]="setStyles()">Pepito de los palotes</div>
+<span>Veremos como usar formularios</span>
+<div class="divContainer">
+  <div class="formulario2">
+    <label for="nombre" class="label">Nombre</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre" class="campoFormulario" [(ngModel)]="usuario.nombreUsuario"/>
+    <label>Long Label 2</label>
+    <span>Display Content</span>
+    <label for="contrasena" class="label">Contraseña</label>
+    <input type="password" id="contrasena" name="contrasena" placeholder="Password" class="campoFormulario" [(ngModel)]="usuario.passwordUsuario" />
+    <label>Long Label 2</label>
+    <span>Display Content</span>
+    <label for="modelo" class="label">Modelo</label>
+    <input type="text" id="modelo" name="modelo" placeholder="Modelo" class="campoFormulario" [(ngModel)]="modelo.texto" />
+    <button (click)="getModel()">Obtener Modelo</button>
+  </div>
+
+</div>
+
+
+
+

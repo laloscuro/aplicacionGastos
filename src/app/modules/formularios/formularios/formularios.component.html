@@ -1,0 +1,47 @@
+<div class="flex-container-2" [hidden]="enviado">
+  <!--<form class="form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    Acceso a la aplicación de Gastos
+    <div class="form__section">
+      <input type="text" #nombre ([ngModel])="Contacto.nombre" name="name" required minlength="4" class="form__input"  placeholder="Introduce Nombre"/>
+    </div>
+    <div class="form__section">
+      <input type="text" #email ([ngModel])="Contacto.email" name="email" required class="form__input" placeholder="Introduce Email"/>
+    </div>
+    <div class="form__section">
+       <input type="text" #phone  ([ngModel])="Contacto.phone" name="phone" required class="form__input" placeholder="Introduce Teléfono"/>
+    </div>
+    <div class="form__section">
+      <input type="text" #subject ([ngModel])="Contacto.subject" name="subject" required class="form__input" placeholder="Introduce Asunto"/>
+    </div>
+    <div class="form__section">
+      <input type="text" #msg ([ngModel])="Contacto.msg" name="msg" required class="form__input" placeholder="Introduce Mensaje"/>
+    </div>
+    <div class="form__section">
+      <button [disabled]="!contacto.form.valid" class="form__input_sub" >Enviar</button>
+    </div>
+    <div class="form__section">
+      <button (click)="limpiar()" class="form__input_sub" >Limpiar</button>
+    </div>
+  </form>//-->
+  <form [formGroup]="form" (submit)="onSubmit(form)">
+    <label for="email">E-mail</label>
+    <input name="email" formControlName="email" required type="email"/>
+    <div *ngIf="email.errors?.email">Debe ser un correo valido</div>
+    <br/>
+    <label for="name">Name</label>
+    <input name="name" formControlName="name" required type="text"/>
+    <br/>
+    <label for="subject">Subject</label>
+    <input name="subject" formControlName="subject" required type="text"/>
+    <br/>
+    <label for="phone">Telephonel</label>
+    <input name="phone" formControlName="phone" required type="number"/>
+    <div *ngIf="phone.errors?.phone">Debe ser un numero válido</div>
+    <br/>
+    <label for="msg">Mensaje</label>
+    <input name="msg" formControlName="msg" required type="text"/>
+    <br/>
+    <button type="submit" [disabled]="form.invalid">Guardar</button>
+    <button type="button" (click)="limpiar()">Limpiar</button>
+  </form>
+  </div>

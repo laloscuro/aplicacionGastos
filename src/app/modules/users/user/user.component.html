@@ -1,0 +1,17 @@
+
+
+<p>Lista de Gastos:</p>
+<ul>
+  <li *ngFor="let gasto of responseGastos">
+     {{gasto.mes}} {{gasto['año']}}
+     <br/>Gastos:
+      <div *ngFor="let detalle of gasto.gastos">{{detalle.concepto}}</div>
+  </li>
+</ul>
+
+<div>Grabar Usuario: <button type="button" (click)="grabarUsuario()">Graba Usuario</button></div>
+
+<div>Obtener Gastos: <button type="button" (click)="obtenerGastos()">Obtener Gastos</button></div>
+<div>Anadir Gasto: <button type="button" (click)="addGasto()">Anadir Gastos</button></div>
+<div>Grabar Persona: <button type="button" (click)="grabarUsuario2()">Grabar Persona</button>
+</div>

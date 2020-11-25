@@ -1,0 +1,138 @@
+.nav__responsive-button-container{
+  position: absolute;
+  width: 100%;
+  font-size: 25px;
+
+}
+
+.nav__responsive-button{
+  padding: 6px 20px;
+  text-align: right;
+  width: 100%;
+}
+
+.flex-container{
+  display: flex;
+  height: 100vh;
+}
+
+
+.flex-item{
+  background-color: #016;
+  color: #ffffff;
+  margin: 0 auto;
+  padding:10px;
+  width: 500px;
+  min-width: 160px;
+  height: 200px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 8px #000;
+}
+
+.formulario{
+  background-color: lightgray;
+  width: 450px;
+  height: 300px;
+  margin:20px auto;
+  position:relative;
+}
+
+div.formulario2{
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-gap: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: #2196F3;
+}
+
+div.formulario2 label{
+  text-align: right;
+}
+div.formulario2 label:after{
+  content: ":";
+
+}
+
+.campoFormulario{
+  background-color: lightgrey;
+  transition: background-color 0.4s, padding 0.4s,font-size 0.4s;
+  padding: 0px;
+  font-size: 15px;
+}
+
+.formulario2 .label
+{
+  vertical-align: middle;
+
+}
+
+.divContainer{
+  position:relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+
+.campoFormulario:hover{
+  background-color: white;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.uno{
+   color: green;
+}
+
+.dos{
+  font-size: 14px;
+}
+
+.tres{
+  color: darkred
+}
+
+.cuatro{
+  font-size: 20px;
+}
+
+
+.grid_container{
+  display:grid;
+  /*grid-template-rows: 150px 150px 150px;*/
+  grid-template-rows: repeat(3,150px);
+  grid-template-columns: repeat(3,minmax(200px,1fr)) ;
+  grid-auto-rows: 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: dense;
+  background-color: yellowgreen;
+  border: 1px solid #000;
+  /*grid-row-gap: 10px;
+  grid-column-gap:10px;;*/
+}
+
+.grid_item{
+   background-color: #CCCCCC;
+   border:1px solid #016
+}
+
+.grid_item:first-child{
+  /*background-color: #016;
+  color: #ffffff;
+  grid-row: 1 / span 2; /* linea 1 y ocupa dos columnas*/
+  /*grid-column: 1 / span 2;
+  /*grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;*/
+}
+
+.grid_item:nth-child(2){
+  /*background-color: crimson;
+  color: #ffffff;
+  /*grid-row-start: 1;
+  grid-row-end: 3;*/
+  /*grid-row: 1 / span 2; /* linea 1 y ocupa dos columnas*/
+
+}

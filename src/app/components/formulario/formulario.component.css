@@ -1,0 +1,124 @@
+div.formulario2{
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-gap: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: #2196F3;
+}
+
+div.formulario2 label{
+  text-align: right;
+}
+div.formulario2 label:after{
+  content: ":";
+
+}
+
+.campoFormulario{
+  background-color: lightgrey;
+  transition: background-color 0.4s, padding 0.4s,font-size 0.4s;
+  padding: 0px;
+  font-size: 15px;
+}
+
+.formulario2 .label
+{
+  vertical-align: middle;
+
+}
+
+.divContainer{
+  position:relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+
+.campoFormulario:hover{
+  background-color: white;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.flex-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+  margin: 50x 50px;
+  padding:20px;
+  flex-wrap: wrap;
+}
+
+
+.form{
+  min-width: 400px;
+  flex:1;
+  text-align: center;
+  padding: 30px;
+}
+
+.form__input{
+  width: 100%;
+  padding: 7px;
+  margin:6px 0;
+  border: none;
+  border-bottom: 3px solid #094;
+  background: transparent;
+  color:#fff;
+  font-size: 15px;
+  transition: background-color 0.4s, padding 0.4s,font-size 0.4s;
+  /*transition: transform 0.4s;*/
+}
+
+.form__input:hover{
+   background: linear-gradient(to bottom, transparent, #222);
+   outline: none;
+   border-bottom: 3px solid #5f8;
+   padding: 9px;
+   font-size: 17px;
+   /*transform: scale(1.1);*/
+}
+
+.form__section{
+  display: flex;
+  align-items: center;
+}
+
+.form__section .label{
+
+  margin-right: 10px;
+}
+
+.form__input_sub{
+  width: 100%;
+  padding: 7px;
+  margin:6px 0;
+  border: none;
+  border-bottom: 3px solid #094;
+  background: transparent;
+  color:#fff;
+  font-size: 15px;
+}
+
+.form input[type="submit"]{
+  background-color: #094;
+  border-bottom: none;
+  padding: 12px;
+}
+
+.form input[type="submit"]:hover{
+  background-color: #062;
+  border-bottom: none;
+  padding: 12px;
+
+}
+
+.form input[type="submit"]:active{
+  background-color: #042;
+  border-bottom: none;
+  padding: 12px;
+
+}

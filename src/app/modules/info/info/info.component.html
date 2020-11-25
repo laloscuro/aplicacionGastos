@@ -1,0 +1,91 @@
+<p>info works!</p>
+<h1>{{nombre | uppercase}} gana {{precio | currency:'EUR':true}}</h1><br/>
+<h2>USO Multiplicador PIPE personalizado</h2>
+{{precio | multiplicador:10}}
+
+<div class="flex-container">
+  <div class="flex-item">
+    <app-formulario [entrada]="usuario.nombre"></app-formulario>
+    <form>
+      <div class="label1"><label>Nombre:</label><input class="campoFormulario" type="text"  name="nombre" placeholder="Nombre"/></div>
+      <div><label>Contraseña:</label><input class="campoFormulario" type="password"  name="password" placeholder="password"/></div>
+      <div style="margin:auto; width: 100%; text-align: center;"><input class="" type="button" value="Entrar" /></div>
+    </form>
+  </div>
+
+</div>
+
+<h1>Lista de Usuarios: {{usuarios.length}}</h1>
+  <ul>
+    <li *ngFor="let usu of usuarios">
+
+      <p *ngIf="usu.edad < 50 ; else edadMayor">{{usu.nombre}}  {{usu.edad}}</p>
+      <ng-template #edadMayor>
+        <p>{{usu.nombre}} es un poco viejo ya que su edad es de {{usu.edad}}</p>
+      </ng-template>
+
+    </li>
+  </ul>
+
+  <h1>Lista de Usuarios: {{usuarios.length}}</h1>
+  <ul>
+    <li  *ngFor="let usu of usuarios">
+      <p *ngIf="usu.edad < 50 ; then edadMenor else edadMayor">{{usu.nombre}}  {{usu.edad}}</p>
+      <ng-template #edadMenor>
+        <p>{{usu.nombre}} es un poco joven ya que su edad es de {{usu.edad}}</p>
+      </ng-template>
+      <ng-template #edadMayor>
+        <p>{{usu.nombre}} es un poco viejo ya que su edad es de {{usu.edad}}</p>
+      </ng-template>
+      <button (click)="verApellidoPorConsola(usu)">Ver Apellido</button>
+    </li>
+  </ul>
+
+  <div [ngClass]="seleccionaClass('dia')">El texto es de cooolor</div>
+<div [ngClass]="seleccionaClass('noche')">El texto es de cooolor</div>
+<!-- Ejempll de Switch Case-->
+<button (click)="Mivalor=1">Seleccionar 1</button>
+<button (click)="Mivalor=2">Seleccionar 2</button>
+<button (click)="Mivalor=3">Seleccionar 3</button>
+
+<h5>Usted ha seleccionado {{Mivalor}}</h5>
+
+
+<div [ngSwitch]="Mivalor">
+  <div *ngSwitchCase="1">Ha elegido el valor <b>{{Mivalor}}</b></div>
+  <div *ngSwitchCase="2">Ha elegido el valor <b>{{Mivalor}}</b></div>
+  <div *ngSwitchCase="3">Ha elegido el valor <b>{{Mivalor}}</b></div>
+  <div *ngSwitchDefault >No Ha elegido ningún valor por tanto es <b>{{Mivalor}}</b></div>
+</div>
+
+  <button (click)="saludar()">Saludar</button>
+  <div class="caja"></div>
+  <div class="caja"></div>
+  <div class="caja"></div>
+  <div class="cajaResponsive">
+    <h1>Este es el título</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eaque ratione nesciunt, minus eum voluptatum,
+       quasi, dicta ea commodi laboriosam ad deleniti iste ab. Iure nesciunt totam laboriosam quaerat nobis repellat
+        autem mollitia minus pariatur, architecto ex, veniam amet?</p>
+  </div>
+  <div class="cajaResponsive" colorer>
+    <h2>Este es el título</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eaque ratione nesciunt, minus eum voluptatum,
+       quasi, dicta ea commodi laboriosam ad deleniti iste ab. Iure nesciunt totam laboriosam quaerat nobis repellat
+        autem mollitia minus pariatur, architecto ex, veniam amet?</p>
+  </div>
+
+  <div class="grid_container">
+    <div class="grid_item">1</div>
+    <div class="grid_item">2</div>
+    <div class="grid_item">3</div>
+    <div class="grid_item">4</div>
+    <div class="grid_item">5</div>
+    <div class="grid_item">6</div>
+    <div class="grid_item">7</div>
+    <div class="grid_item">8</div>
+    <div class="grid_item">9</div>
+  </div>
+
+
+
