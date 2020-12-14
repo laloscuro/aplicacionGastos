@@ -8,6 +8,13 @@
       <div *ngFor="let detalle of gasto.gastos">{{detalle.concepto}}</div>
   </li>
 </ul>
+<div style="display:flex">
+  <div class="boton" style="background-color: blue;"><a (click)="changeState('state2')"> Cambiar a state 2</a></div>
+  <div class="boton "style="background-color:brown;"><a (click)="changeState('state1')"> Cambiar a state 1</a></div>
+</div>
+<div style="justify-content: center; align-items: center;">
+  <app-animate [currentState]="toState"></app-animate>
+</div>
 
 <div>Grabar Usuario: <button type="button" (click)="grabarUsuario()">Graba Usuario</button></div>
 

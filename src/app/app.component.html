@@ -9,10 +9,12 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
 <style>
   :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    //font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'Titillium Web', sans-serif;
     font-size: 14px;
     color: #333;
     box-sizing: border-box;
@@ -124,11 +126,12 @@ header, main, footer {
 </style>
 
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <span style="padding-left:4px">Persona Logada:{{authService.getUserLogged()}}</span>
-
-  <span style="margin-left:100px"><a [routerLink]="['/enrutable']">Componente - Rutas</a></span>
+<div class="container">
+<div class="" role="banner">
+  <div class="nav-main" role="banner">
   <ul>
+    <li>Persona Logada :{{authService.getUserLogged()}}</li>
+    <li><a [routerLink]="['/enrutable']">Componente - Rutas</a></li>
     <li *ngIf="!(isLoggedIn | async)" (click)="authService.login()">
       <a>Login</a>
     </li>
@@ -136,7 +139,7 @@ header, main, footer {
       <a>Logout</a>
     </li>
   </ul>
-
+  </div>
 
 </div>
 
@@ -200,3 +203,5 @@ header, main, footer {
     </div>
   </footer>
 </article>
+
+</div>

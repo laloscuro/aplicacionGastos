@@ -5,6 +5,7 @@ import { GastosDetail } from '../../../models/GastosDetail';
 import { Gasto } from '../../../models/Gasto';
 import { HttpResponse } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -27,6 +28,10 @@ export class UserComponent implements OnInit {
    };
    gas:Gasto;
 
+
+
+  toState = 'state1';
+
   constructor(private remoteDataService: RemoteDataServiceService) { }
 
   ngOnInit(): void {
@@ -37,8 +42,6 @@ export class UserComponent implements OnInit {
     }, err => {
         console.log("Error:",err);
   });
-
-
    /*this.remoteDataService.getGastos().subscribe(response =>
     {
       this.responseGastos = response;
@@ -48,6 +51,13 @@ export class UserComponent implements OnInit {
         console.log("Error:",err);
        });*/
 
+  }
+
+
+  changeState(state:any)
+  {
+    console.log("Cambio a estado:"+state);
+    this.toState=state;
   }
 
   obtenerGastos()

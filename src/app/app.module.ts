@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, LOCALE_ID} from '@angular/core';
 import { AppRoutingModule } from './rutas/app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,16 +10,18 @@ import localeEs  from '@angular/common/locales/es';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 
 import { AuthInterceptorInterceptor } from './services/auth-interceptor.interceptor';
+import { AnimateComponent } from './components/animate/animate.component';
 
 registerLocaleData(localeEs,'es');
 
 @NgModule({
   declarations: [
     AppComponent,
-    ColorerDirective
+    ColorerDirective,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule
